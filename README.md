@@ -19,7 +19,7 @@ The screenshots also include [Spanish](docs/screenshots/operations-desk-es.png) 
 Python 3.10+, Node 20+, Java 17+, and an internet connection for the first dependency and DynamoDB Local download. Docker and AWS credentials are **not** required. [AWS documents DynamoDB Local as a free local development tool](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html).
 
 ```powershell
-cd C:\Proyectos\YuJu\Code\hotel-ops-dynamodb-demo
+# From the cloned repository root
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -r requirements.txt
 New-Item -ItemType Directory -Force .local | Out-Null
@@ -33,7 +33,7 @@ Open **three terminals**:
 
 ```powershell
 # Terminal 1: DynamoDB Local
-cd C:\Proyectos\YuJu\Code\hotel-ops-dynamodb-demo\.local\dynamodb
+cd .local\dynamodb
 java "-Djava.library.path=./DynamoDBLocal_lib" -jar DynamoDBLocal.jar -sharedDb -port 8008
 ```
 
